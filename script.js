@@ -1,16 +1,39 @@
-var dHTML = document.querySelector('#days');
-var hHTML = document.querySelector('#hours');
-var mHTML = document.querySelector('#minutes');
-var sHTML = document.querySelector('#seconds');
+const render = (days, hours, minutes, seconds) => {
+    let dHTML = document.querySelector('#days');
+    let hHTML = document.querySelector('#hours');
+    let mHTML = document.querySelector('#minutes');
+    let sHTML = document.querySelector('#seconds');
+
+    renderDays = "";
+    if (days < 10) {renderDays = `0${days}`;}
+    else {renderDays = days;}
+
+    renderHours = "";
+    if (hours < 10) {renderHours = `0${hours}`;}
+    else {renderHours = hours;}
+
+    renderMinutes = "";
+    if (minutes < 10) {renderMinutes = `0${minutes}`}
+    else {renderMinutes = minutes;}
+
+    renderSeconds = "";
+    if (seconds < 10) {renderSeconds = `0${seconds}`}
+    else {renderSeconds = seconds;}
+
+    dHTML.innerHTML = renderDays;
+    hHTML.innerHTML = renderHours;
+    mHTML.innerHTML = renderMinutes;
+    sHTML.innerHTML = renderSeconds;
+}
 
 function timeForEvent() {
     let now = Date.now();
     // Pattern of Date object 'December 17, 1995 03:24:00'
-    let date_event = new Date ('November 5, 2024 10:00:00').valueOf();
+    let date_event = new Date ('November 7, 2024 10:00:00').valueOf();
     let remaining_time = date_event - now;
     return remaining_time;
 }
-   
+
 interval = setInterval(() => {
     let remaining_time = timeForEvent();
     console.log(remaining_time)
@@ -19,10 +42,7 @@ interval = setInterval(() => {
     let m = Math.floor((remaining_time % (1000 * 60 * 60)) / (1000 * 60));
     let s = Math.floor((remaining_time % (1000 * 60)) / (1000));
 
-    dHTML.innerHTML = d;
-    hHTML.innerHTML = h;
-    mHTML.innerHTML = m;
-    sHTML.innerHTML = s;
+    render(d, h, m, s);
 
     // if (s == 0) {
     //     s = 59;

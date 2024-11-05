@@ -160,9 +160,9 @@ header .nav-item {
 
 .entretenimentos {
     background-color: var(--purple);
-    max-width: max-content;
+    max-width: 90vw;
     margin: 3rem auto 8rem auto;
-    padding: 30px;
+    padding: 20px;
     border-radius: 25px;
     border: dashed var(--orange);
 }
@@ -246,6 +246,13 @@ header .nav-item {
     padding: 0;
     margin: 10rem auto;
     padding: 30px;
+}
+
+@media screen and (max-width: 550px)  {
+    #counter {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 #counter h1 {
