@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+:root {
+    --purple: #17153B;
+    --pink: #C8ACD6;
+    --black: #1E1E1E;
+    --gray: #F5F7F8;
+    --dark-gray: #726b6b;
+    --orange: #ff7925;
+    --white: #e0dcdc;
+    --light-purple: #4d4780;
+}
+
+body {
+    background-color: var(--black);
+    background-image: url('assets/images/morcegos.png');
+    background-size: 400px 400px;
+    background-repeat: repeat;
+    font-family: "Creepster", system-ui;
+    color: var(--pink);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 5rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+p {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+#eu {
+    width: 40rem;
+    border: dashed var(--orange);
+    margin: 1rem;
+}
+
+.box-info {
+    display: inline-block;
+    width: 40rem;
+    background-color: var(--purple);
+    padding: 40px;
+    margin: 20px;
+    border-radius: 25px;
+    border: dashed var(--orange);
+}
+
+#tecnologias {
+    padding: 0;
+    list-style: none;
+}
+
+#descricao {
+    color: var(--gray);
+    margin-bottom: 20px;
+}

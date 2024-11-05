@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+:root {
+    --purple: #17153B;
+    --pink: #C8ACD6;
+    --black: #1E1E1E;
+    --gray: #F5F7F8;
+    --dark-gray: #726b6b;
+    --orange: #ff7925;
+    --white: #e0dcdc;
+    --light-purple: #4d4780;
+}
+
+body {
+    background-color: var(--black);
+    background-image: url('assets/images/morcegos.png');
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    font-family: "Creepster", system-ui;
+    color: var(--pink);
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 4rem;
+}
+
+h2 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--purple);
+    z-index: 1;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.6)
+}
+
+header #logo {
+    width: 4rem;
+    height: 4rem;
+    margin: 10px;
+}
+
+header .nav-item {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--pink);
+    padding: 10px 30px 10px 10px;
+}
+
+#initial {
+    background-color: var(--purple);
+    background-image: url(assets/images/bg.png);
+    background-size: cover;
+    height: 97vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#initial #moon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    box-shadow: -3px 3px 4px rgb(230,229, 229),
+        -3px -3px 4px rgb(230, 229, 229),
+        3px -3px 4px rgb(230, 229, 229),
+        3px 3px 4px rgb(230, 229, 229)
+}
+
+#moon #bruxa {
+    width: 7rem;
+    height: 7rem;
+}
+
+
+#event {
+    width: 100%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+}
+
+#box-info, #box-info2 {
+    background-color: var(--purple);
+    text-align: center;
+    padding: 40px;
+    border-radius: 25px;
+    border: dashed var(--orange);
+}
+
+#shopping-container {
+    margin: 20px;
+}
+
+#shopping {
+    width: 20rem;
+    height: auto;
+}
+
+#aranha-container {
+    width: max-content;
+    position: relative;
+    left: 50%;
+    height: 320px;
+}
+
+#line {
+    background-color: white;
+    width: 2px;
+    animation: increase-height 3s infinite;
+}
+
+@keyframes increase-height {
+    from {height: 20px;}
+    50% {height: 200px;}
+    100% {height: 20px;}
+}
+
+#aranha {
+    position: absolute;
+    top: 200px;
+    transform: translate(-50%, -14%);
+    animation: spider-web 3s infinite;
+}
+
+@keyframes spider-web {
+    from {top: 20px}
+    50% {top: 200px;}
+    100% {top: 20px;}
+}
+
+.entretenimentos {
+    background-color: var(--purple);
+    max-width: max-content;
+    margin: 3rem auto 8rem auto;
+    padding: 30px;
+    border-radius: 25px;
+    border: dashed var(--orange);
+}
+
+.entretenimentos .atividade {
+    border-bottom: 2.5px dashed var(--orange);
+    margin: 3rem 0;
+}
+
+.entretenimentos .atividade:last-child {
+    border-bottom: none;
+}
+
+.atividade h2 {
+    margin: 2rem 1rem
+}
+
+.atividade .horario {
+    color: var(--gray);
+    margin: 1rem 1rem 2rem 1rem;
+    font-size: 1.5rem;
+}
+
+.atividade .descricao {
+    color: var(--pink);
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.7rem;
+}
+
+#lista-jogos {
+    padding: 0;
+    margin: 0 1rem 1rem 1rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+#lista-jogos li .nome-jogo {
+    width: max-content;
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid var(--gray);
+}
+
+#zumbi {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    margin: 2rem 2rem 2rem 2rem;
+    animation: scare 1.8s infinite;
+    vertical-align: middle;
+}
+
+#box-info2 {
+    display: inline-block;
+    width: 60vw;
+    top: 6rem;
+    vertical-align: middle;
+}
+
+@keyframes scare {
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+#counter {
+    background-color: var(--purple);
+    border: dashed var(--orange);
+    border-radius: 25px;
+    width: max-content;
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding: 0;
+    margin: 10rem auto;
+    padding: 30px;
+}
+
+#counter h1 {
+    margin: 0;
+}
+
+#counter p {
+    margin: 0;
+}
+
+#formulario-inscricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 90vw;
+    margin: 1rem auto;
+    background-color: var(--purple);
+    padding: 30px;
+    border-radius: 25px;
+    border: dashed var(--orange);
+}
+
+#formulario-inscricao .contole-campos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form-label {
+    margin: 10px 0;
+    padding-left: 15px;
+    font-size: 1.7rem;
+}
+
+#formulario-inscricao .contole-campos input {
+    font-size: 1.5rem;
+    width: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--white);
+    border: none;
+    box-shadow: 4px 4px 1px var(--dark-gray);
+}
+
+#formulario-inscricao .contole-campos input:focus {
+    outline: none;
+    box-shadow: 4px 4px 1px var(--light-purple);
+}
+
+#botao-inscricao {
+    background-color: var(--light-purple);
+    color: var(--white);
+    font-family: "Creepster", system-ui;
+    font-size: 2rem;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 15px;
+    border-style: none;
+}
+
+#botao-inscricao:active {
+    background-color: var(--dark-gray);
+    box-shadow:inset 4px 4px 2px var(--black);
+    font-size: 1.9rem;
+    margin: 40.16px;
+}
+
+.error {
+    margin: 10px 0;
+    padding-left: 15px;
+    color: rgb(179, 3, 3);
+    font-size: 1.1rem;
+}

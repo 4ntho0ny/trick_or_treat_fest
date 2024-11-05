@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>TOTFEST</title>
+</head>
+<body>
+    <header>
+        <img src="assets/images/bruxa.png" alt="logo" id="logo">
+        <a href="about.html" class="nav-item">criador</a>
+    </header>
+
+    <section id="initial">
+        <div id="moon">
+            <img id="bruxa" src="assets/images/bruxa.png" alt="Bruxa">
+        </div>
+        <h1 id="event-name">TRICK OR TREAT FEST</h1>
+    </section>
+
+    <section id="event">
+        <div class="info-container">
+            <div id="box-info">
+                <h2>O maior evento de halloween do Brasil está chegando em Campo Grande, MS dia 16/11.</h2>
+            </div>
+            <div id="shopping-container">
+                <img src="assets/images/shopping.png" alt="Shopping Campo Grande" id="shopping">
+                <div id="aranha-container">
+                    <div id="line"></div>
+                    <img src="assets/images/aranha.png" alt="aranha" id="aranha">
+                </div>
+            </div>
+        </div>
+
+        <div class="entretenimentos">
+            <div class="atividade">
+                <h2>Concurso de Fantasias</h2>
+                <p class="horario"><time>18:00</time> - <time>20:00</time></p>
+                <p class="descricao">Premiação para as melhores fantasias em categorias como 
+                    “Mais Assustadora” e “Mais Criativa”.</p>
+            </div>
+            <div class="atividade">
+                <h2>Jogos Temáticos</h2>
+                <p class="horario">A partir das <time>10:00</time></p>
+                <ul id="lista-jogos">
+                    <li><p class="nome-jogo">Caça ao Tesouro</p>
+                        <p>Esconda itens assustadores pelo espaço e ofereça 
+                        prêmios para quem encontrar todos.</p></li>
+                    <li><p class="nome-jogo">Quiz de Terror</p>
+                        <p>Prepare perguntas sobre filmes de terror, lendas urbanas, monstros e 
+                        outros temas assustadores.</p></li>
+                    <li><p class="nome-jogo">Bingo de Halloween</p>
+                        <p>Substitua números por figuras
+                        como fantasmas, abóboras e morcegos.</p></li>
+                </ul>
+            </div>
+            <div class="atividade">
+                <h2>Photobooth Temático</h2>
+                <p class="horario">A partir das <time>12:00</time></p>
+                <p class="descricao">Crie um cenário com acessórios de Halloween para as pessoas tirarem fotos. 
+                    Use adereços como chapéus de bruxa, máscaras, crânios e 
+                    molduras decoradas.</p>
+            </div>
+            <div class="atividade">
+                <h2>Atividades de "Doce ou Travessura"</h2>
+                <p class="horario"><time>15:00</time> - <time>16:30</time></p>
+                <p class="descricao">rie uma experiência onde os participantes façam 
+                    desafios ou respondam perguntas para ganhar doces ou enfrentar 
+                    "pegadinhas".</p>
+            </div>
+            <div class="atividade">
+                <h2>Karaokê de Halloween</h2>
+                <p class="horario"><time>11:00</time> - <time>15:00</time></p>
+                <p class="descricao">Prepare uma seleção de músicas de Halloween 
+                    (como "Thriller" de Michael Jackson) e incentive os participantes 
+                    a cantar e dançar.</p>
+            </div>
+        </div>
+        <div class="info-container">
+            <img src="assets/images/zumbi.png" alt="Zumbi" id="zumbi">
+            <div id="box-info2">
+                <h2>E não se esqueça daquela sua fantasia tenebrosa!</h2>
+            </div>
+        </div>
+    </section>
+    <ul id="counter">
+        <li>
+            <h1 id="days">00</h1>
+            <p>dias</p>
+        </li>
+        <li>
+            <h1 id="hours">00</h1>
+            <p>horas</p>
+        </li>
+        <li>
+            <h1 id="minutes">00</h1>
+            <p>minutos</p>
+        </li>
+        <li>
+            <h1 id="seconds">00</h1>
+            <p>segundos</p>
+        </li>
+    </ul>
+    <form id="formulario-inscricao" action="/">
+        <h2>Inscreva-se para o Concurso de Fantasias</h2>
+        <div class="contole-campos">
+            <label for="Nome" class="form-label">Nome</label>
+            <input type="text" id="nome">
+            <span class="error"></span>
+        </div>
+        <div class="contole-campos">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email">
+            <span class="error"></span>
+        </div>
+        <div class="contole-campos">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="telefone" id="telefone">
+            <span class="error"></span>
+        </div>
+        <button type="submit" id="botao-inscricao">Inscrever-se</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
