@@ -78,6 +78,20 @@ header .nav-item {
     align-items: center;
 }
 
+#initial #event-name {
+    width: max-content;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 550px)  {
+    #initial #event-name {
+        background-color: #17153bd2;
+        border-radius: 25px;
+        width: 70vw;
+        margin: 2rem auto;
+    }
+}
+
 #initial #moon {
     display: flex;
     justify-content: center;
@@ -248,14 +262,13 @@ header .nav-item {
     padding: 30px;
 }
 
-@media screen and (max-width: 550px)  {
-    #counter {
-        flex-direction: column;
-        align-items: center;
-    }
+#counter li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#counter h1 {
+#counter #days, #hours, #minutes, #seconds {
     margin: 0;
 }
 
@@ -263,12 +276,19 @@ header .nav-item {
     margin: 0;
 }
 
+@media screen and (max-width: 550px)  {
+    #counter {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 #formulario-inscricao {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    max-width: 90vw;
+    width: 60vw;
     margin: 1rem auto;
     background-color: var(--purple);
     padding: 30px;
@@ -326,4 +346,14 @@ header .nav-item {
     padding-left: 15px;
     color: rgb(179, 3, 3);
     font-size: 1.1rem;
+}
+
+@media screen and (max-width: 550px)  {
+    #formulario-inscricao {
+        width: 90vw;
+    }
+
+    #formulario-inscricao .contole-campos input {
+        width: 100%;
+    }
 }
