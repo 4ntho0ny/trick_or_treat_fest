@@ -13,7 +13,7 @@
 
 body {
     background-color: var(--black);
-    background-image: url('assets/images/morcegos.png');
+    background-image: url('../assets/images/morcegos.png');
     background-size: 400px 400px;
     background-repeat: repeat;
     font-family: "Creepster", system-ui;
@@ -52,6 +52,10 @@ p {
     margin: 1rem;
 }
 
+.titulo{
+    border-bottom: dashed var(--orange);
+}
+
 .box-info {
     display: inline-block;
     width: 40rem;
@@ -62,7 +66,7 @@ p {
     border: dashed var(--orange);
 }
 
-#tecnologias {
+ul {
     padding: 0;
     list-style: none;
 }
